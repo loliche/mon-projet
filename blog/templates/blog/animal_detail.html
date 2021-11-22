@@ -1,0 +1,25 @@
+{% load static %}
+{% block content %}
+<head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog2.css' %}">
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Animalerie</a></h1>
+    </div>
+<div class="page-header">
+    <h1>
+        <a href="/">{{ animal.id_animal }}</a>
+    </h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <b> Changer : </b> {{ form.as_ul }}
+        <button type="submit" class="btn btn-outline-dark">OK</button>
+        <a href="{% url 'animal_list' %}">Back</a>
+    </form>
+</div>
+</body>
+ 
+ 
+{% endblock %}

@@ -1,0 +1,139 @@
+
+.page-header {
+    background-color: #4EAF95;
+    margin-top: 0;
+    padding: 10px 0px 0px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h3, h4 {
+    color : #ffffff;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+    color: #9DC2B8;
+    text-align: center ;
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    color: #ffffff;
+    text-align: center ;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 115%;
+}
+
+.etat {
+    background-color: gray;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    vertical-align: middle;
+}
+
+.etat_libre {
+    background-color: #8DB871;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.etat_occupe {
+    background-color: #EA7171;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+img {
+    background-size: cover;
+    width : 180px ;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.blocanimal {
+    background-color: #9DC2B8;
+    width : 200px;
+    text-align: center ;
+    margin: 10px;
+    border-radius: 10px ; 
+    padding-bottom: 15px;
+}
+
+.blocequip {
+    background-color: #9DC2B8;
+    width : 200px;
+    text-align: center ;
+    margin: 10px;
+    border-radius: 10px ; 
+    padding-bottom: 0px;
+}
+
+#conteneur
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus-de-detail{
+    background-color: #6AA684;
+    color: #000000;
+    width : 30px ;
+    height : 30px ;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.plus-de-detail:hover /* Apparence au survol des liens */
+{
+    background-color: #548067;
+    color: #000000;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+}

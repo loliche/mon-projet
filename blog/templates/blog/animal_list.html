@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+    <head>
+        <title>Animalerie de Lola Mils</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog1.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Animalerie</a></h1>
+        </div>
+            <h2> Les animaux </h2>
+    <div id="conteneur">
+    {% for animal in animals %}
+    <div class="blocanimal">
+    <h3>{{ animal.id_animal }}</h3>
+    <a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
+    <img src={{animal.photo}}>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-1">
+                    <p> {{ animal.lieu }}</p>
+                </div>
+                <div class="col col-lg-1">
+                    <p class="etat">{{ animal.etat}}</p>
+                </div>
+            </div>
+        </div>
+    <script language="JavaScript" type="text/javascript">
+    function doOpenWindow(MyURL){
+        window.open(MyURL,null,"height=400,width=300,status=yes,toolbar=no,menubar=no,location=no" );
+        }
+    </script>
+    <a class='plus-de-detail' href="" onclick="doOpenWindow('{% url 'animal_detail' animal.id_animal %}');">
+    Plus de détails</a>
+    </div>
+    {% endfor %}
+    </div>
+    <h2> Les équipements </h2>
+    <div id="conteneur">
+    {% for equipement in equipements %}
+        <div class="blocequip">
+            <h3>{{ equipement.id_equip }}</h3>
+            <img src={{equipement.photo}}>
+            {%if equipement.disponibilite == 'libre'%}
+            <p class="etat_libre">{{ equipement.disponibilite}}</p>
+            {%else %}
+            <p class="etat_occupe">{{ equipement.disponibilite}}</p>
+            {%endif%}
+        </div>
+    {% endfor %}
+    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
