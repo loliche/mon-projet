@@ -3,22 +3,35 @@
 <head>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog2.css' %}">
+        <link href='//fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog1.css' %}">
 </head>
 <body>
     <div class="page-header">
         <h1><a href="/">Animalerie</a></h1>
     </div>
-<div class="page-header">
-    <h1>
-        <a href="/">{{ animal.id_animal }}</a>
-    </h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        <b> Changer : </b> {{ form.as_ul }}
-        <button type="submit" class="btn btn-outline-dark">OK</button>
-        <a href="{% url 'animal_list' %}">Back</a>
-    </form>
-</div>
+    <div class="formulaire">
+        <h1><a href="/" style="color : #9DC2B8">{{ animal.id_animal }}</a></h1>
+            {%if animal.etat == 'affamé'%}
+            <p style="color : #9DC2B8">{{animal.id_animal}} est affamé, nourrissez le en le plaçant à la mangeoire.</p>
+            {%elif animal.etat == 'repus'%}
+            <p style="color : #9DC2B8">{{animal.id_animal}} est repus, faites lui faire un peu de sport en le plaçant à la roue.</p>
+            {%elif animal.etat == 'fatigué'%}
+            <p style="color : #9DC2B8">{{animal.id_animal}} est fatigué, laissez le se reposer en le couchant dans le nid.</p>
+            {%elif animal.etat == 'endormi'%}
+            <p style="color : #9DC2B8">{{animal.id_animal}} est endormi, réveillez le en le plaçant dans la litère.</p>
+            {%endif%}
+        <form method="POST" class="post-form">{% csrf_token %}
+            <b> Changer : </b> {{ form.as_ul }}
+            <button type="submit" class="btn btn-outline-dark">OK</button>
+            <a style="color : #9DC2B8" href="{% url 'animal_list' %}">Back</a>
+        </form>
+        {% if message != ''%}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+        {% endif %}
+    </div>
 </body>
  
  

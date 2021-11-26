@@ -1,5 +1,4 @@
 body {
-    background-color: #4EAF95;
     margin-left: 15px;
 }
 
@@ -7,4 +6,16 @@ body {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.page-header {
+    background-color: #4EAF95;
+    margin-top: 0;
+    padding: 10px 0px 0px 40px;
+}
+
+h1, h3, h4 {
+    color : #ffffff;
+    font-family: 'Bebas Neue', cursive;
 }

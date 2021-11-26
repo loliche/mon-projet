@@ -1,3 +1,7 @@
+body {
+        max-width: 100%;
+        overflow-x: hidden;
+}
 
 .page-header {
     background-color: #4EAF95;
@@ -91,6 +95,7 @@ img {
 #conteneur
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -136,4 +141,30 @@ img {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+.formulaire {
+    text-align: center;
+    color : #9DC2B8;
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.formulaire2 {
+    text-align: center;
+    background-color : #98c4b8;
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.titre {
+    text-align: center;
+    color : #9DC2B8;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.ajout {
+    color : white;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: underline;
 }

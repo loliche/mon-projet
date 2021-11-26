@@ -8,15 +8,19 @@
         <link rel="stylesheet" href="{% static 'css/blog1.css' %}">
     </head>
     <body>
-        <div class="page-header">
-            <h1><a href="/">Animalerie</a></h1>
+    <div class="page-header">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col"><h1><a href="/">Animalerie</a></h1></div>
+            <div class="col" ><a class="ajout" href="{% url 'animal_new' %}">Ajouter un animal</a></div>
         </div>
+    </div>
+    </div>
             <h2> Les animaux </h2>
     <div id="conteneur">
     {% for animal in animals %}
     <div class="blocanimal">
     <h3>{{ animal.id_animal }}</h3>
-    <a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
     <img src={{animal.photo}}>
         <div class="container">
             <div class="row justify-content-md-center">
